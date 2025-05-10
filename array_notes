@@ -1,0 +1,372 @@
+| Step  | Topic                        | Kya samjhenge?                         | Practice Exercise |
+|------|------------------------------|-----------------------------------------|------------------|
+| 1    | Array Traversal                | Array ke elements ko print kaise karte hain? (for/while loop) | Ek array ko print karna |
+| 2    | Find Max/Min element           | Array mein largest/smallest number kaise dhundte hain? | Max aur Min find karna |
+| 3    | Searching (Linear Search)      | Kisi number ko array mein kaise search karte hain? | Search operation |
+| 4    | Insertion (Manual shifting)    | Array mein new element add karna, position define kar ke | Insert element |
+| 5    | Deletion (Manual shifting)     | Kisi element ko remove karna | Delete element |
+
+
+1. Array Traversal
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {10, 20, 30, 40, 50};
+//     int n = 5; // size of array
+
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
+
+2. User se 5 input loh and unka sum nikalo and unka everage bhi nikalo
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[5];
+//     int sum = 0;
+
+//     cout << "Enter 5 values: ";
+//     for (int i = 0; i < 5; i++) {
+//         cin >> arr[i];        // input
+//         sum += arr[i];        // sum karna
+//     }
+
+//     cout << "Sum is: " << sum;
+
+//     return 0;
+// }
+
+3. User se 5 numbers ka input lo aur array mein store karo.
+Phir array mein sabse bada (maximum) number find karke print karo.
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[5];
+
+//     cout << "Enter 5 values: ";
+//     for (int i = 0; i < 5; i++) {
+//         cin >> arr[i];
+//     }
+
+//     int max = arr[0];  // Assume first value is max
+
+//     for (int i = 1; i < 5; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
+
+//     cout << "Maximum value is: " << max;
+
+//     return 0;
+// }
+
+5. Linear search in Array
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[5] = {1,2,3,4,5};
+//     int key;
+//     cin >> key;  // Take input ONCE
+//     bool found = false;
+
+//     for(int i=0; i<5; i++){
+//         if(arr[i] == key){
+//             found = true;
+//             break;
+//         }
+//     }
+
+//     if(found) cout << "Found";
+//     else cout << "Not found";
+//     return 0;
+// }
+
+6. Linear search using user input
+//  #include <iostream>
+//  using namespace std;
+//  int main()
+//  {
+//      int n;
+//      cin >> n;
+//      int arr[n];
+//      for (int i = 0; i < n; i++)
+//      {
+//          cin >> arr[i];
+//          cout << "The value of array i got are: " << arr;
+//      }
+//      int key;
+//      cin >> key;
+//      bool found = false;
+//      for (int i = 0; i < n; i++)
+//      {
+//          if (arr[i] == key)
+//          {
+//              found = true;
+//              break;
+//          }
+//      }
+//      if (found)
+//      {
+//          cout << "Found";
+//      }
+//      else
+//      {
+//          cout << "Not found";
+//      }
+//      return 0;
+//  }
+
+7. Find the **minimum** element in an array using user input
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[5]={50,40,30,20,10};
+//     int min = arr[0];
+//     for (int i=0;i<5;i++){
+//         if(arr[i]<min){
+//             min=arr[i];
+//         }
+//     }
+//     cout << "The minimum value is: " << min;
+//     return 0;
+//}
+8. Get the size of an array and input of an array and reverse it
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
+
+//     int arr[n];
+
+//     for(int i=0; i<n;i++){
+//         cin >> arr[i];
+//     }
+
+//     for(int i=0; i<n/2;i++){
+//         int temp=arr[i];
+//         arr[i]=arr[n-1-i];
+//         arr[n-1-i]=temp;
+//     }
+//     for(int i=0;i<n;i++){
+//         cout << arr[i];
+//     }
+//     return 0;
+// }
+
+
+9. binary search in array
+// #include<iostream>
+// using namespace std;
+
+// int BinarySearch(int arr[], int n, int key) {
+//     int low = 0, high = n-1;
+//     while (low <= high) {
+//         int mid = low + (high - low)/2;  // Correct midpoint calculation
+//         if (arr[mid] == key) {
+//             return mid;
+//         }
+//         else if (arr[mid] < key) {
+//             low = mid + 1;  // Search right half
+//         }
+//         else {
+//             high = mid - 1;  // Search left half
+//         }
+//     }
+//     return -1;  // Moved outside the while loop
+// }
+
+// int main() {
+//     int arr[100];  // Added array declaration
+//     int n;
+//     cin >> n;
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+//     int key;
+//     cin >> key;
+//     int result = BinarySearch(arr, n, key);
+//     if (result != -1) {
+//         cout << "found";
+//     }
+//     else {
+//         cout << "not found";  // Added missing cout
+//     }
+//     return 0;
+// }
+
+10. take size and elements through input and insert at first of the array
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[100]; // Max size
+//     int n;
+
+//     // Input size and elements
+//     cout << "Enter size of array: ";
+//     cin >> n;
+
+//     cout << "Enter " << n << " elements: ";
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     // Value to insert at first
+//     int value;
+//     cout << "Enter value to insert at first: ";
+//     cin >> value;
+
+//     // Shift elements to the right
+//     for(int i = n; i > 0; i--) {
+//         arr[i] = arr[i - 1];
+//     }
+
+//     // Insert at first
+//     arr[0] = value;
+//     n++; // Increase size   //n++ = array mein naye element ki wajah se size 1 se badh gaya
+
+//     // Output result
+//     cout << "Array after insertion at first: ";
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
+11. take size and elements through input and insert at end
+//  #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[100]; // Max size
+//     int n;
+
+//     // Input size and elements
+//     cout << "Enter size of array: ";
+//     cin >> n;
+
+//     cout << "Enter " << n << " elements: ";
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     // Value to insert at end
+//     int value;
+//     cout << "Enter value to insert at end: ";
+//     cin >> value;
+
+//     // Insert at end
+//     arr[n] = value;
+//     n++; // Increase size
+
+//     // Output result
+//     cout << "Array after insertion at end: ";
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
+12. take the size and elements of the array and print at that index
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[100];
+//     int n;
+//     cin >> n;
+//     for(int i=0; i<n; i++){
+//         cin >> arr[i];
+//     }
+//     int value;
+//     cin >> value;
+//     int pos;
+//     cin >> pos;
+//     for(int i=n;i>pos;i--){
+//         arr[i] = arr[i-1];
+//     }
+//     arr[pos]=value;
+//     n++;
+//     for(int i=0;i<n;i++){
+//         cout << arr[i];
+//     }
+// }
+
+13.take the size and elements of an array and delete the first element
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[100];
+//     int n;
+//     cin >> n;
+//     for(int i=0; i<n; i++){
+//         cin >> arr[i];
+//     }
+//     for(int i=0;i<n-1;i++){
+//         arr[i] = arr[i+1];
+//     }
+//     n--;
+//     for(int i=0; i<n; i++){
+//         cout << arr[i];
+//     }
+// }
+
+14.take the size and element of an array and delete the last element
+// #include<iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[100];
+//     int n;
+//     cin >> n;
+
+//     // Input array
+//     for(int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+
+//     n--;  // Simply reduce size (last element ignored)
+
+//     // Print updated array
+//     for(int i = 0; i < n; i++) {
+//         cout << arr[i] << " ";
+//     }
+
+//     return 0;
+// }
+
+15. take the size and element of an array and delete the nth element
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[100];
+//     int n;
+//     cin >> n;
+//     for(int i=0; i<n; i++){
+//         cin >> arr[i];
+//     }
+//     int pos;
+//     cin >> pos;
+//     for(int i=pos; i<n-1; i++){
+//         arr[i] = arr[i+1];
+//     }
+//     n--;
+//     for(int i=0;i<n;i++){
+//         cout << arr[i];
+//     }
+// } 
+
+// Original: [10, 20, 30, 40] (n=4)
+// After Shift:
+// - i=1: [10, 30, 30, 40]  
+// - i=2: [10, 30, 40, 40]  
+// After n--: [10, 30, 40] (n=3)  
+
