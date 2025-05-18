@@ -24,7 +24,7 @@ bool search(Node *head, int key)
     while (current != nullptr)
     {
         if (current->data == key)
-        {
+        {                               // see only current->data and return true
             return true;
         }
         current = current->next;

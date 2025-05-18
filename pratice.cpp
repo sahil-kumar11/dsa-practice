@@ -1,7 +1,19 @@
-int count =1;
-for(int i=0;i<4;i++){
-    for(int j=0;j<i;j++){
-        consoleWriteLine(count);
-        count++;
+#include<iostream>
+using namespace std;
+struct Node{
+    int data;
+    Node* next;
+};
+void insertAtEnd(Node* &head,int value){
+    Node* newNode = new Node{value,nullptr};
+    if(head == nullptr){
+        head = newNode;
+        return;
     }
+    Node* temp = head;
+while(temp->next = nullptr){
+    temp = temp->next;
 }
+temp->next = newNode;
+}
+

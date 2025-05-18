@@ -42,7 +42,7 @@ void deleteAtPosition(Node* &head, int position) {
         return;
     }
 
-    Node* nodeToDelete = temp->next;
+    Node* nodeToDelete = temp->next;    // understand that
     temp->next = temp->next->next;  // Skip the node
     delete nodeToDelete;            // Delete the node
 }
