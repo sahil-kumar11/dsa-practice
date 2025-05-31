@@ -1,0 +1,9 @@
+Insert at first
+insert at posiiton
+insert at end
+delete at first
+delete at position
+delete at end
+searching in DLL
+traversal in DLL
+reverse in DLL

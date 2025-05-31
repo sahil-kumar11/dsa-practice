@@ -16,9 +16,9 @@ void print(Node* head){
 }
 int main(){
     Node* head = nullptr;
-    inserAtFirst(head,30);
-    inserAtFirst(head,20);
-    inserAtFirst(head,10);
+    insertAtFirst(head,30);
+    insertAtFirst(head,20);
+    insertAtFirst(head,10);
 
     print(head);
     return 0;
